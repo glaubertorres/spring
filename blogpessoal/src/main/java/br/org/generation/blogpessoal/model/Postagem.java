@@ -31,6 +31,8 @@ public class Postagem {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
+	
+	
 	// getter e setters
 	public long getId() {
 		return id;
