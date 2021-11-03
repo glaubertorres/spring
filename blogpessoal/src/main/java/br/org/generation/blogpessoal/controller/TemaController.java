@@ -65,7 +65,7 @@ public class TemaController {
 		return temaRepository.findById(id)
 				.map(resposta -> {
 					temaRepository.deleteById(id);
-					return ResponseEntity.notFound().build();
+					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 				})
 				.orElse(ResponseEntity.notFound().build());
 	}
