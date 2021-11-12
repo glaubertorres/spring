@@ -45,6 +45,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\securing-web"/>
 			<item value="C:\Users\glaub\Desktop\Projeto_Integrador\Back End\ecommerce\src\main\java\br\org\generation\ecommerce"/>
 			<item value="C:\Users\glaub\Desktop\Projeto_Integrador\Back End\ecommerce"/>
 			<item value="C:\Users\glaub\Desktop\Projeto_Integrador\Back End"/>

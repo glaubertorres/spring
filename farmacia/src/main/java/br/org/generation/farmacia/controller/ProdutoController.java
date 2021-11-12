@@ -93,5 +93,6 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> getByPrecoEntre(@PathVariable BigDecimal inicio, @PathVariable BigDecimal fim){
 		return ResponseEntity.ok(produtoRepository.buscarProdutosEntre(inicio, fim));
 	}
+	
 
 }
