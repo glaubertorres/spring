@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.0.RELEASE\.metadata\.plugins\org.eclipse.jdt.core
 3254901327.index
 3155829908.index
-966376460.index
 2649688509.index
 3362300204.index
 813031730.index
@@ -16,7 +15,6 @@ INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.
 923137864.index
 2103582777.index
 732917303.index
-1303845817.index
 3494045655.index
 2565245885.index
 2097314960.index
@@ -33,7 +31,6 @@ INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.
 702755752.index
 4026998845.index
 39600494.index
-3491621715.index
 642899311.index
 4137661618.index
 507194541.index
@@ -67,7 +64,6 @@ INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.
 2954827155.index
 490419036.index
 552837475.index
-3703596388.index
 3260715499.index
 3917631080.index
 1927724471.index
@@ -102,7 +98,6 @@ INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.
 2329659536.index
 891131788.index
 200366544.index
-78498791.index
 1157598124.index
 1559901533.index
 4102073116.index
@@ -112,4 +107,3 @@ INDEX VERSION 1.131+C:\Users\glaub\Documents\workspace-spring-tool-suite-4-4.12.
 4144631971.index
 2964345699.index
 1492770412.index
-1962631937.index
