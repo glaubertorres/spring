@@ -36,17 +36,17 @@ public class ProdutoController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Produto> getById(@PathVariable long id){
 		return produtoRepository.findById(id)
-			.map(resp-> ResponseEntity.ok(resp))
-			.orElse(ResponseEntity.notFound().build());
+		.map(resp-> ResponseEntity.ok(resp))
+		.orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/nome/{nome}")
-	public ResponseEntity<List<Produto>> getByNome(@PathVariable String nome){
+	public ResponseEntity<List<Produto>> getByName(@PathVariable String nome){
 		return ResponseEntity.ok(produtoRepository.findAllByNomeContainingIgnoreCase(nome));
 	}	
 	
 	@PostMapping
-	public ResponseEntity<Produto> postProduto(@Valid @RequestBody Produto produto){
+	public ResponseEntity<Produto> post(@Valid @RequestBody Produto produto){
 		return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto));
 	}
 	
@@ -65,11 +65,11 @@ public class ProdutoController {
 	public ResponseEntity<?> deleteProduto(@PathVariable long id) {
 		
 		return produtoRepository.findById(id)
-				.map(resposta -> {
-					produtoRepository.deleteById(id);
-					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-				})
-				.orElse(ResponseEntity.notFound().build());
+			.map(resposta -> {
+				produtoRepository.deleteById(id);
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+			})
+			.orElse(ResponseEntity.notFound().build());
 	}
 
 	// Consulta pelo preço maior do que o preço digitado emm ordem crescente

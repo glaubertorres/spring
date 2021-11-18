@@ -22,9 +22,9 @@ import br.org.generation.lojagames.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/categorias")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins="*", allowedHeaders="*")
 public class CategoriaController {
-	
+
 	@Autowired
 	private CategoriaRepository categoriaRepository;
 	
@@ -33,9 +33,9 @@ public class CategoriaController {
 		
 		return ResponseEntity.ok(categoriaRepository.findAll());
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Categoria> getById(@PathVariable long id){
+	private ResponseEntity<Categoria> getById(@PathVariable long id){
 		
 		return categoriaRepository.findById(id)
 			.map(resp -> ResponseEntity.ok(resp))
@@ -43,13 +43,13 @@ public class CategoriaController {
 	}
 	
 	@GetMapping("/tipo/{tipo}")
-	public ResponseEntity<List<Categoria>> getByTipo(@PathVariable String tipo){
+	public ResponseEntity<List<Categoria>> GetByTipo(@PathVariable String tipo){
 		
 		return ResponseEntity.ok(categoriaRepository.findAllByTipoContainingIgnoreCase(tipo));	
 	}
 	
 	@PostMapping
-	public ResponseEntity<Categoria> postCategoria(@Valid @RequestBody Categoria categoria){
+	public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria categoria){
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
 	}
@@ -58,10 +58,10 @@ public class CategoriaController {
 	public ResponseEntity<Categoria> putCategoria(@Valid @RequestBody Categoria categoria) {
 					
 		return categoriaRepository.findById(categoria.getId())
-				.map(resposta -> {
-					return ResponseEntity.ok().body(categoriaRepository.save(categoria));
-				})
-				.orElse(ResponseEntity.notFound().build());
+			.map(resposta -> {
+				return ResponseEntity.ok().body(categoriaRepository.save(categoria));
+			})
+			.orElse(ResponseEntity.notFound().build());
 
 	}
 
@@ -69,11 +69,11 @@ public class CategoriaController {
 	public ResponseEntity<?> deleteCategoria(@PathVariable long id) {
 		
 		return categoriaRepository.findById(id)
-				.map(resposta -> {
-					categoriaRepository.deleteById(id);
-					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-				})
-				.orElse(ResponseEntity.notFound().build());
+			.map(resposta -> {
+				categoriaRepository.deleteById(id);
+				return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+			})
+			.orElse(ResponseEntity.notFound().build());
 	}
 
 }

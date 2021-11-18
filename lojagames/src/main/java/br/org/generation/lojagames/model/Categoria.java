@@ -29,10 +29,7 @@ public class Categoria {
 	private String tipo;
 	
 	@OneToMany(mappedBy = "categoria",cascade = CascadeType.ALL)
-	//Especifica uma associação de muitos valores com multiplicidade de um para muitos
 	@JsonIgnoreProperties("categoria")
-	/*Anotação que pode ser usada para suprimir a serialização de propriedades ou 
-	 *ignorar o processamento de propriedades JSON lidas*/
 	private List<Produto> produto;
 
 	public long getId() {
